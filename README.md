@@ -1,11 +1,5 @@
 # Backend REST APIs - FSD Practical 5
 
-## Student Name: Amit Prajapat  
-## Subject: Full Stack Development (FSD)  
-## Practical No: 5  
-## Title: Backend REST APIs with Middleware and Validation  
-
-
 ## Objective
 To create RESTful APIs for Products, Users, Cart, and Orders using Node.js and Express with proper middleware, validation, and server-side error handling.
 
@@ -89,5 +83,11 @@ All endpoints tested successfully using Postman.
 
 ## Conclusion
 Successfully implemented REST APIs with middleware, validation, error handling and tested using Postman.
+
+## Author
+Amit Prajapat  
+B.Tech CSE  
+FSD Practical 5
+
 
 
