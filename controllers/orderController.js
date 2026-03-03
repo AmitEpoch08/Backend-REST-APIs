@@ -1,22 +1,25 @@
-let orders = [{id: 1, userId: 1, totalAmount: 50000}];
+const Order = require("../models/Order");
 
-exports.getOrders = (req, res) => {
-  res.json(orders);
+// CREATE ORDER
+exports.createOrder = async (req, res) => {
+  try {
+    const order = new Order(req.body);
+    const savedOrder = await order.save();
+    res.status(201).json(savedOrder);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 };
 
-exports.createOrder = (req, res) => {
-  const { userId, totalAmount } = req.body;
+// GET ORDERS WITH POPULATION
+exports.getOrders = async (req, res) => {
+  try {
+    const orders = await Order.find()
+      .populate("user")
+      .populate("products.product");
 
-  if (!userId || !totalAmount) {
-    return res.status(400).json({ message: "Invalid order data" });
+    res.status(200).json(orders);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
-
-  const order = {
-    id: orders.length + 1,
-    userId,
-    totalAmount
-  };
-
-  orders.push(order);
-  res.status(201).json(order);
 };

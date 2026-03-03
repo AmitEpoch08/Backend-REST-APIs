@@ -1,22 +1,25 @@
-let cart = [1];
+const Cart = require("../models/Cart");
 
-exports.getCart = (req, res) => {
-  res.json(cart);
+// CREATE CART
+exports.createCart = async (req, res) => {
+  try {
+    const cart = new Cart(req.body);
+    const savedCart = await cart.save();
+    res.status(201).json(savedCart);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 };
 
-exports.addToCart = (req, res) => {
-  const { productId, quantity } = req.body;
+// GET CARTS (with population)
+exports.getCarts = async (req, res) => {
+  try {
+    const carts = await Cart.find()
+      .populate("user")
+      .populate("products.product");
 
-  if (!productId || !quantity) {
-    return res.status(400).json({ message: "Invalid data" });
+    res.status(200).json(carts);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
-
-  const item = {
-    id: cart.length + 1,
-    productId,
-    quantity
-  };
-
-  cart.push(item);
-  res.status(201).json(item);
 };
