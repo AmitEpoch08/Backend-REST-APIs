@@ -93,7 +93,7 @@ http://localhost:3000
 
 ---
 
-## 🗄 MongoDB Schemas
+## MongoDB Schemas
 
 - Product
 - User
