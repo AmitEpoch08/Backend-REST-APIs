@@ -1,6 +1,6 @@
 # Backend REST APIs - FSD Practical 5 & 6
 
-## 📌 Objective
+## Objective
 
 ### Practical 5
 To create RESTful APIs for Products, Users, Cart, and Orders using Node.js and Express with proper middleware, validation, and server-side error handling.
@@ -21,7 +21,7 @@ To integrate MongoDB Atlas with the backend using Mongoose, define schemas for P
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 Backend/
 ├── controllers/
 ├── models/
@@ -34,7 +34,7 @@ Backend/
 
 ---
 
-## 🚀 Installation Steps
+## Installation Steps
 
 1. Clone the repository:
 git clone https://github.com/AmitEpoch08/Backend-REST-APIs.git
@@ -57,7 +57,7 @@ http://localhost:3000
 
 ---
 
-## 🔗 API Endpoints
+## API Endpoints
 
 ### Products
 - POST /products
@@ -80,7 +80,7 @@ http://localhost:3000
 
 ---
 
-## 🧠 Features Implemented
+## Features Implemented
 
 ✔ REST API Development  
 ✔ Middleware (express.json)  
@@ -104,20 +104,20 @@ Schemas are defined using Mongoose with validation and references using ObjectId
 
 ---
 
-## 🧪 Testing
+## Testing
 
 All CRUD operations were tested using Postman and verified in MongoDB Atlas.
 
 ---
 
-## 🎯 Conclusion
+## Conclusion
 
 Practical 5 and Practical 6 were successfully completed.  
 MongoDB Atlas was integrated using Mongoose, and full CRUD operations were implemented and tested successfully.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Amit Prajapati  
 B.Tech CSE  
