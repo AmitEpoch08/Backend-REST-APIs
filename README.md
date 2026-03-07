@@ -10,7 +10,7 @@ To integrate MongoDB Atlas with the backend using Mongoose, define schemas for P
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - Node.js
 - Express.js
@@ -119,6 +119,6 @@ MongoDB Atlas was integrated using Mongoose, and full CRUD operations were imple
 
 ## Author
 
-Amit Prajapati  
+Amit Prajapat
 B.Tech CSE  
 Full Stack Development
